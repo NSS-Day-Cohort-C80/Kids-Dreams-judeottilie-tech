@@ -35,10 +35,10 @@ Make sure your Developer Tools are open at all times while working on this proje
 Before you click the "Complete Assessment" button on the Learning Platform, add your answers below each question and make a commit.
 
 1. When a child is clicked on in the browser, which module contains the code that will execute on that event happening? Can you explain the algorithm of that logic?
-   > Your answer here
+   > The module that contains the click event code is Kids.js. The first check is for the data type and to see if it matches the "child" data type attribute `itemClicked.dataset.type === "child"`. The for loop then asks if the item that was clicked was "child" data type. If the answer is yes, the item returns a pop up relating to that data type and checks the specific Id of the data type relating to which item was clicked. The pop up shows the specific child name(returned if it matches the id for the child, using the specific properties of that child) and returns the property ".name" and ".wish".
 2. In the **Pairings** module, why must the `findCelebrityMatch()` function be invoked inside the `for..of` loop that iterates the kids array?
-   > Your answer here
+   > `findCelebrityMatch()` cannot find the specific kid's celebrity match unless it is inside the for..of loop. `kid` only lives inside this loop, so without being inside the same loop, findCelebrityMatch() cannot return that information.
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
-   > Your answer here
+   > The first step is finding the celebrities in the database. This is found by locating getCelebrities in the database,  which is a function returning a structuredClone holding the  (database.celebrities) properties. celebrity is an object in an array, and each celebrity has the property "sport:".  The window alert's for loop runs through the celebrities objects, checking if the clicked object id property matches the celebrity.id property. If it does, it returns the window alert with the ${celebrity.sport}, which locates the sport property assigned to that specific celebrity.
 4. Can you describe, in detail, the algorithm that is in the `main` module?
-   > Your answer here
+   > First step is importing the functions Pairings from ./Pairings.js, Celebrities from ./CelebrityList.js, and Kids from ./Kids.js. The method document.querySelector("#container") locates the id of container in the HTML file (DOM) and assigns it to the mainContainer variable. Next, we invoke the const applicationHTML string, holding the HTML for the page invoking the functions imported above. This allows for that information to appear on the local server page. Lastly, mainContainer.innerHTML = applicationHTML injects into the `#container` element on the actual page. This allows for the HTML to be shown on the page.
